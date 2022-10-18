@@ -27,8 +27,7 @@ test:
 
 production:
   <<: *default
-  database: <%= ENV['RDS_DB_NAME'] %>
-  username: <%= ENV['RDS_USERNAME'] %>
-  password: <%= ENV['RDS_PASSWORD'] %>
-  host: <%= ENV['RDS_HOSTNAME'] %>
-  port: <%= ENV['RDS_POSRT'] %>
+  encoding: utf8
+  timeout: 5000
+  reaping_frequency: 10
+  url: <%= ENV['DATABASE_URL'] %>
